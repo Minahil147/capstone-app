@@ -1,0 +1,15 @@
+{
+  "name": "devflow-ai-backend",
+  "version": "1.0.0",
+  "description": "DevFlow AI - Capstone backend (Week 2: Node + Express basics)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
