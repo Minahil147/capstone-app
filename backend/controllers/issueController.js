@@ -1,17 +1,6 @@
-// Day 4 concept: separating routes from controllers.
-// routes/issueRoutes.js just says WHICH function handles WHICH URL.
-// This file has the actual logic for each one. That separation means
-// you can find "what does GET /issues/:id do" by reading one short
-// function, without wading through Express route-registration code.
-
 const issues = require("../data/issues");
 const ApiError = require("../utils/ApiError");
-
-// tracks the next id to hand out, since this is an in-memory store
 let nextId = issues.length + 1;
-
-// GET /api/issues
-// GET /api/issues?status=open
 function getAllIssues(req, res) {
   const { status } = req.query;
 
@@ -23,7 +12,6 @@ function getAllIssues(req, res) {
   res.status(200).json(issues);
 }
 
-// GET /api/issues/:id
 function getIssueById(req, res) {
   const id = Number(req.params.id);
   const issue = issues.find((issue) => issue.id === id);
@@ -35,9 +23,6 @@ function getIssueById(req, res) {
   res.status(200).json(issue);
 }
 
-// POST /api/issues
-// validateIssue middleware has already confirmed `title` exists
-// by the time this runs.
 function createIssue(req, res) {
   const { title, description = "", status = "open" } = req.body;
 
@@ -54,7 +39,6 @@ function createIssue(req, res) {
   res.status(201).json(newIssue);
 }
 
-// PUT /api/issues/:id
 function updateIssue(req, res) {
   const id = Number(req.params.id);
   const issue = issues.find((issue) => issue.id === id);
@@ -72,7 +56,6 @@ function updateIssue(req, res) {
   res.status(200).json(issue);
 }
 
-// DELETE /api/issues/:id
 function deleteIssue(req, res) {
   const id = Number(req.params.id);
   const index = issues.findIndex((issue) => issue.id === id);
