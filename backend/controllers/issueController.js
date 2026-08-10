@@ -1,77 +1,65 @@
-const issues = require("../data/issues");
+const Issue = require("../models/Issue");
 const ApiError = require("../utils/ApiError");
-let nextId = issues.length + 1;
-function getAllIssues(req, res) {
+const asyncHandler = require("../utils/asyncHandler");
+
+const getAllIssues = asyncHandler(async (req, res) => {
   const { status } = req.query;
-
-  if (status) {
-    const filtered = issues.filter((issue) => issue.status === status);
-    return res.status(200).json(filtered);
-  }
-
+  const filter = status ? { status } : {};
+  const issues = await Issue.find(filter);
   res.status(200).json(issues);
-}
+});
 
-function getIssueById(req, res) {
-  const id = Number(req.params.id);
-  const issue = issues.find((issue) => issue.id === id);
+const getMyIssues = asyncHandler(async (req, res) => {
+  const issues = await Issue.find({ createdBy: req.user.id });
+  res.status(200).json(issues);
+});
 
-  if (!issue) {
-    throw new ApiError(404, `Issue with id ${id} not found`);
-  }
-
+const getIssueById = asyncHandler(async (req, res) => {
+  const issue = await Issue.findById(req.params.id);
+  if (!issue) throw new ApiError(404, `Issue with id ${req.params.id} not found`);
   res.status(200).json(issue);
-}
+});
 
-function createIssue(req, res) {
+const createIssue = asyncHandler(async (req, res) => {
   const { title, description = "", status = "open" } = req.body;
-
-  const newIssue = {
-    id: nextId++,
+  const newIssue = await Issue.create({
     title: title.trim(),
     description,
     status,
-    category: null, // AI classifier fills this in later
-    priority: null,
-  };
-
-  issues.push(newIssue);
+    createdBy: req.user.id,
+  });
   res.status(201).json(newIssue);
-}
+});
 
-function updateIssue(req, res) {
-  const id = Number(req.params.id);
-  const issue = issues.find((issue) => issue.id === id);
+const updateIssue = asyncHandler(async (req, res) => {
+  const issue = await Issue.findById(req.params.id);
+  if (!issue) throw new ApiError(404, `Issue with id ${req.params.id} not found`);
 
-  if (!issue) {
-    throw new ApiError(404, `Issue with id ${id} not found`);
+  const isOwner = issue.createdBy.toString() === req.user.id;
+  if (!isOwner && req.user.role !== "admin") {
+    throw new ApiError(403, "You can only edit issues you created");
   }
 
   const { title, description, status } = req.body;
-
   if (title !== undefined) issue.title = title.trim();
   if (description !== undefined) issue.description = description;
   if (status !== undefined) issue.status = status;
 
+  await issue.save();
   res.status(200).json(issue);
-}
+});
 
-function deleteIssue(req, res) {
-  const id = Number(req.params.id);
-  const index = issues.findIndex((issue) => issue.id === id);
+const deleteIssue = asyncHandler(async (req, res) => {
+  const issue = await Issue.findById(req.params.id);
+  if (!issue) throw new ApiError(404, `Issue with id ${req.params.id} not found`);
 
-  if (index === -1) {
-    throw new ApiError(404, `Issue with id ${id} not found`);
+  const isOwner = issue.createdBy.toString() === req.user.id;
+  if (!isOwner && req.user.role !== "admin") {
+    throw new ApiError(403, "You can only delete issues you created");
   }
 
-  const [deleted] = issues.splice(index, 1);
-  res.status(200).json({ message: "Issue deleted", issue: deleted });
-}
+  await issue.deleteOne();
+  res.status(200).json({ message: "Issue deleted", issue });
+});
 
-module.exports = {
-  getAllIssues,
-  getIssueById,
-  createIssue,
-  updateIssue,
-  deleteIssue,
-};
+module.exports = { getAllIssues, getMyIssues, getIssueById, createIssue, updateIssue, deleteIssue };
