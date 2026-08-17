@@ -21,7 +21,7 @@ const getIssueById = asyncHandler(async (req, res) => {
 });
 
 const createIssue = asyncHandler(async (req, res) => {
-  const { title, description = "", status = "open" } = req.body;
+  const { title, description = "", status = "todo" } = req.body;
   const newIssue = await Issue.create({
     title: title.trim(),
     description,

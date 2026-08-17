@@ -6,8 +6,10 @@ const errorHandler = require("./middleware/errorHandler");
 const ApiError = require("./utils/ApiError");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use(requestLogger);
 app.use("/api/auth", authRoutes);

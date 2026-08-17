@@ -4,7 +4,7 @@ const issueSchema = new mongoose.Schema(
   {
     title: { type: String, required: [true, "Title is required"], trim: true },
     description: { type: String, default: "" },
-    status: { type: String, enum: ["open", "closed"], default: "open" },
+    status: { type: String, enum: ["todo", "in-progress", "done"], default: "todo" },
     category: { type: String, default: null },
     priority: { type: String, default: null },
     createdBy: {
