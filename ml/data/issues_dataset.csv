@@ -1,0 +1,221 @@
+title,description,category
+Outdated documentation for dark mode toggle,Would help onboarding if this had a short example.,documentation
+Allow users to bulk actions from dark mode toggle,Competitor tools already support this and it's a common request.,feature
+Is there a way to customize dashboard charts?,,question
+Add keyboard shortcuts to MongoDB connection,,feature
+Introduce bulk actions for MongoDB connection,This would pair well with the existing status system.,feature
+navbar throws an error after switching between tabs quickly,,bug
+kanban drag handler shows stale data after submitting the form twice,Only reproduces when the user is logged in with an expired token.,bug
+auth middleware crashes when clicking submit before validation finishes,"Steps to reproduce: open the page, trigger the action, and observe the console error.",bug
+README is missing instructions for email notifications,,documentation
+auth middleware shows stale data after clicking submit before validation finishes,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+navbar crashes when switching between tabs quickly,"Steps to reproduce: open the page, trigger the action, and observe the console error.",bug
+README is missing instructions for comment thread,,documentation
+How do I configure dashboard charts?,"New to the codebase, trying to understand the intended usage.",question
+Why does API rate limiter behave this way?,,question
+What's the recommended approach for login form?,Searched the README but it doesn't cover this case.,question
+README is missing instructions for API rate limiter,,documentation
+Document the setup steps for settings page,The current docs reference an old version of the config file.,documentation
+Allow users to dark mode from signup page,Would make the workflow much faster for power users.,feature
+Is there a way to customize settings page?,Not sure if this is expected behavior or a misconfiguration on my end.,question
+kanban drag handler throws an error after switching between tabs quickly,"Steps to reproduce: open the page, trigger the action, and observe the console error.",bug
+Clarify the API docs for file upload widget,Would help onboarding if this had a short example.,documentation
+search bar throws an error after switching between tabs quickly,"Console shows a TypeError, stack trace points to the component's effect hook.",bug
+Is there a way to customize kanban drag handler?,Searched the README but it doesn't cover this case.,question
+kanban drag handler is broken on mobile after the network drops mid-request,"Console shows a TypeError, stack trace points to the component's effect hook.",bug
+Support inline editing in file upload widget,Several users have asked for this in feedback calls.,feature
+file upload widget crashes when the page is refreshed,"Console shows a TypeError, stack trace points to the component's effect hook.",bug
+What's the recommended approach for issue board?,Not sure if this is expected behavior or a misconfiguration on my end.,question
+Outdated documentation for API rate limiter,Would help onboarding if this had a short example.,documentation
+API rate limiter doesn't update after logging in with an expired session,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+Add code comments explaining profile page,,documentation
+How do I configure password reset flow?,"New to the codebase, trying to understand the intended usage.",question
+README is missing instructions for password reset flow,Would help onboarding if this had a short example.,documentation
+Support activity history in issue board,This would pair well with the existing status system.,feature
+Clarify the API docs for password reset flow,The current docs reference an old version of the config file.,documentation
+Document the setup steps for file upload widget,New contributors keep asking the same setup questions in chat.,documentation
+dark mode toggle is broken on mobile after the network drops mid-request,"Started happening after the latest deploy, likely a regression.",bug
+Allow users to filtering by tag from search bar,Several users have asked for this in feedback calls.,feature
+Why does login form behave this way?,"Couldn't find this in the docs, asking here before opening a bug report.",question
+Why does dashboard charts behave this way?,Not sure if this is expected behavior or a misconfiguration on my end.,question
+Outdated documentation for email notifications,Docs mention a flag that no longer exists.,documentation
+How do I configure email notifications?,"Couldn't find this in the docs, asking here before opening a bug report.",question
+Support drag-and-drop reordering in navbar,,feature
+README is missing instructions for kanban drag handler,Would help onboarding if this had a short example.,documentation
+Add inline editing to API rate limiter,Several users have asked for this in feedback calls.,feature
+email notifications is broken on mobile after switching between tabs quickly,"Console shows a TypeError, stack trace points to the component's effect hook.",bug
+profile page shows stale data after the page is refreshed,"Started happening after the latest deploy, likely a regression.",bug
+Introduce keyboard shortcuts for signup page,Competitor tools already support this and it's a common request.,feature
+Does profile page support custom status labels?,Not sure if this is expected behavior or a misconfiguration on my end.,question
+Unexpected behavior in issue list view when the network drops mid-request,,bug
+Does dark mode toggle support filtering by tag?,"Couldn't find this in the docs, asking here before opening a bug report.",question
+password reset flow doesn't update after submitting the form twice,"Console shows a TypeError, stack trace points to the component's effect hook.",bug
+Introduce inline editing for MongoDB connection,Competitor tools already support this and it's a common request.,feature
+Document the setup steps for profile page,Docs mention a flag that no longer exists.,documentation
+Does profile page support email digests?,"New to the codebase, trying to understand the intended usage.",question
+API rate limiter doesn't update after resizing the browser window,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+Outdated documentation for MongoDB connection,New contributors keep asking the same setup questions in chat.,documentation
+Introduce bulk actions for JWT refresh flow,Several users have asked for this in feedback calls.,feature
+Why does navbar behave this way?,"Couldn't find this in the docs, asking here before opening a bug report.",question
+Does login form support undo support?,Searched the README but it doesn't cover this case.,question
+Clarify the API docs for file upload widget,Docs mention a flag that no longer exists.,documentation
+Support CSV export in search bar,Several users have asked for this in feedback calls.,feature
+What's the recommended approach for profile page?,,question
+Clarify the API docs for email notifications,The current docs reference an old version of the config file.,documentation
+Is there a way to customize issue board?,Not sure if this is expected behavior or a misconfiguration on my end.,question
+Document the setup steps for file upload widget,New contributors keep asking the same setup questions in chat.,documentation
+signup page crashes when the page is refreshed,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+Outdated documentation for kanban drag handler,New contributors keep asking the same setup questions in chat.,documentation
+Is there a way to customize comment thread?,"New to the codebase, trying to understand the intended usage.",question
+Add dark mode to settings page,"Proposing this as a stretch goal, not urgent but valuable.",feature
+Add custom status labels to navbar,Competitor tools already support this and it's a common request.,feature
+dashboard charts throws an error after resizing the browser window,"Console shows a TypeError, stack trace points to the component's effect hook.",bug
+Support email digests in signup page,"Proposing this as a stretch goal, not urgent but valuable.",feature
+Unexpected behavior in kanban drag handler when the network drops mid-request,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+dark mode toggle is broken on mobile after the network drops mid-request,"Started happening after the latest deploy, likely a regression.",bug
+Add filtering by tag to login form,Several users have asked for this in feedback calls.,feature
+Add code comments explaining kanban drag handler,,documentation
+Support two-factor authentication in dark mode toggle,Would make the workflow much faster for power users.,feature
+email notifications shows stale data after clicking submit before validation finishes,Only reproduces when the user is logged in with an expired token.,bug
+Does search bar support CSV export?,,question
+file upload widget is broken on mobile after logging in with an expired session,Only reproduces when the user is logged in with an expired token.,bug
+How do I configure auth middleware?,"Couldn't find this in the docs, asking here before opening a bug report.",question
+Allow users to activity history from JWT refresh flow,,feature
+Document the setup steps for file upload widget,,documentation
+Add code comments explaining dark mode toggle,The current docs reference an old version of the config file.,documentation
+README is missing instructions for dark mode toggle,Docs mention a flag that no longer exists.,documentation
+Document the setup steps for profile page,Docs mention a flag that no longer exists.,documentation
+Add two-factor authentication to JWT refresh flow,"Proposing this as a stretch goal, not urgent but valuable.",feature
+Is there a way to customize file upload widget?,"Couldn't find this in the docs, asking here before opening a bug report.",question
+signup page doesn't update after switching between tabs quickly,"Steps to reproduce: open the page, trigger the action, and observe the console error.",bug
+Outdated documentation for login form,The current docs reference an old version of the config file.,documentation
+dark mode toggle is broken on mobile after the page is refreshed,,bug
+Document the setup steps for file upload widget,Docs mention a flag that no longer exists.,documentation
+What's the recommended approach for API rate limiter?,Searched the README but it doesn't cover this case.,question
+Why does dashboard charts behave this way?,Not sure if this is expected behavior or a misconfiguration on my end.,question
+navbar shows stale data after the page is refreshed,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+Add dark mode to profile page,This would pair well with the existing status system.,feature
+profile page shows stale data after submitting the form twice,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+Add undo support to search bar,,feature
+Why does dashboard charts behave this way?,,question
+Add code comments explaining pagination controls,Docs mention a flag that no longer exists.,documentation
+Allow users to CSV export from settings page,Would make the workflow much faster for power users.,feature
+Is there a way to customize login form?,"Couldn't find this in the docs, asking here before opening a bug report.",question
+Allow users to drag-and-drop reordering from issue board,,feature
+Why does dashboard charts behave this way?,Searched the README but it doesn't cover this case.,question
+email notifications is broken on mobile after switching between tabs quickly,"Steps to reproduce: open the page, trigger the action, and observe the console error.",bug
+Add drag-and-drop reordering to dark mode toggle,Would make the workflow much faster for power users.,feature
+pagination controls crashes when submitting the form twice,,bug
+Is there a way to customize navbar?,"New to the codebase, trying to understand the intended usage.",question
+MongoDB connection throws an error after clicking submit before validation finishes,"Started happening after the latest deploy, likely a regression.",bug
+Outdated documentation for MongoDB connection,,documentation
+What's the recommended approach for settings page?,Searched the README but it doesn't cover this case.,question
+Unexpected behavior in dashboard charts when submitting the form twice,"Steps to reproduce: open the page, trigger the action, and observe the console error.",bug
+Add dark mode to kanban drag handler,Several users have asked for this in feedback calls.,feature
+Document the setup steps for email notifications,,documentation
+Allow users to CSV export from dark mode toggle,Would make the workflow much faster for power users.,feature
+Introduce email digests for API rate limiter,"Proposing this as a stretch goal, not urgent but valuable.",feature
+Outdated documentation for issue board,The current docs reference an old version of the config file.,documentation
+Does password reset flow support filtering by tag?,Not sure if this is expected behavior or a misconfiguration on my end.,question
+dashboard charts is broken on mobile after the page is refreshed,,bug
+What's the recommended approach for search bar?,Searched the README but it doesn't cover this case.,question
+Add activity history to dashboard charts,,feature
+Introduce bulk actions for search bar,,feature
+Allow users to filtering by tag from MongoDB connection,"Proposing this as a stretch goal, not urgent but valuable.",feature
+Allow users to bulk actions from API rate limiter,"Proposing this as a stretch goal, not urgent but valuable.",feature
+password reset flow crashes when the network drops mid-request,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+Allow users to dark mode from auth middleware,Competitor tools already support this and it's a common request.,feature
+Clarify the API docs for password reset flow,New contributors keep asking the same setup questions in chat.,documentation
+Why does comment thread behave this way?,"New to the codebase, trying to understand the intended usage.",question
+README is missing instructions for email notifications,Would help onboarding if this had a short example.,documentation
+dark mode toggle throws an error after logging in with an expired session,Only reproduces when the user is logged in with an expired token.,bug
+Support keyboard shortcuts in profile page,Would make the workflow much faster for power users.,feature
+pagination controls throws an error after resizing the browser window,,bug
+pagination controls crashes when the network drops mid-request,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+Introduce CSV export for file upload widget,Several users have asked for this in feedback calls.,feature
+Support keyboard shortcuts in email notifications,Competitor tools already support this and it's a common request.,feature
+How do I configure MongoDB connection?,,question
+settings page crashes when the network drops mid-request,,bug
+Document the setup steps for navbar,Would help onboarding if this had a short example.,documentation
+Does issue list view support two-factor authentication?,,question
+Why does search bar behave this way?,"New to the codebase, trying to understand the intended usage.",question
+Is there a way to customize dark mode toggle?,Searched the README but it doesn't cover this case.,question
+How do I configure issue list view?,"Couldn't find this in the docs, asking here before opening a bug report.",question
+Add activity history to pagination controls,,feature
+Add two-factor authentication to kanban drag handler,"Proposing this as a stretch goal, not urgent but valuable.",feature
+Document the setup steps for JWT refresh flow,Would help onboarding if this had a short example.,documentation
+Does auth middleware support CSV export?,Searched the README but it doesn't cover this case.,question
+settings page shows stale data after clicking submit before validation finishes,"Console shows a TypeError, stack trace points to the component's effect hook.",bug
+How do I configure settings page?,Searched the README but it doesn't cover this case.,question
+README is missing instructions for dashboard charts,Docs mention a flag that no longer exists.,documentation
+Document the setup steps for MongoDB connection,New contributors keep asking the same setup questions in chat.,documentation
+Add code comments explaining issue board,The current docs reference an old version of the config file.,documentation
+file upload widget shows stale data after submitting the form twice,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+Clarify the API docs for navbar,Docs mention a flag that no longer exists.,documentation
+Clarify the API docs for issue list view,Would help onboarding if this had a short example.,documentation
+MongoDB connection shows stale data after the token expires,"Steps to reproduce: open the page, trigger the action, and observe the console error.",bug
+Support drag-and-drop reordering in issue list view,Several users have asked for this in feedback calls.,feature
+Document the setup steps for pagination controls,The current docs reference an old version of the config file.,documentation
+README is missing instructions for issue list view,Docs mention a flag that no longer exists.,documentation
+Is there a way to customize dashboard charts?,"New to the codebase, trying to understand the intended usage.",question
+kanban drag handler is broken on mobile after the token expires,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+Allow users to two-factor authentication from comment thread,Several users have asked for this in feedback calls.,feature
+signup page crashes when switching between tabs quickly,"Steps to reproduce: open the page, trigger the action, and observe the console error.",bug
+Outdated documentation for kanban drag handler,The current docs reference an old version of the config file.,documentation
+README is missing instructions for profile page,Docs mention a flag that no longer exists.,documentation
+Outdated documentation for pagination controls,Docs mention a flag that no longer exists.,documentation
+Add code comments explaining login form,,documentation
+issue board shows stale data after the token expires,,bug
+What's the recommended approach for profile page?,"Couldn't find this in the docs, asking here before opening a bug report.",question
+Support keyboard shortcuts in comment thread,Several users have asked for this in feedback calls.,feature
+Support keyboard shortcuts in settings page,,feature
+Introduce inline editing for issue list view,Would make the workflow much faster for power users.,feature
+issue list view crashes when resizing the browser window,"Steps to reproduce: open the page, trigger the action, and observe the console error.",bug
+Support undo support in kanban drag handler,This would pair well with the existing status system.,feature
+Why does JWT refresh flow behave this way?,"New to the codebase, trying to understand the intended usage.",question
+Add code comments explaining issue list view,The current docs reference an old version of the config file.,documentation
+Clarify the API docs for email notifications,Would help onboarding if this had a short example.,documentation
+Introduce CSV export for navbar,Competitor tools already support this and it's a common request.,feature
+kanban drag handler is broken on mobile after the page is refreshed,"Console shows a TypeError, stack trace points to the component's effect hook.",bug
+Add code comments explaining pagination controls,Would help onboarding if this had a short example.,documentation
+Unexpected behavior in navbar when the token expires,Only reproduces when the user is logged in with an expired token.,bug
+What's the recommended approach for dashboard charts?,,question
+MongoDB connection throws an error after logging in with an expired session,"Started happening after the latest deploy, likely a regression.",bug
+Introduce keyboard shortcuts for navbar,This would pair well with the existing status system.,feature
+search bar crashes when switching between tabs quickly,"This happens consistently on Chrome and Firefox, haven't tested Safari yet.",bug
+MongoDB connection is broken on mobile after switching between tabs quickly,"Console shows a TypeError, stack trace points to the component's effect hook.",bug
+Document the setup steps for search bar,,documentation
+Introduce custom status labels for dark mode toggle,Would make the workflow much faster for power users.,feature
+API rate limiter crashes when switching between tabs quickly,"Steps to reproduce: open the page, trigger the action, and observe the console error.",bug
+How do I configure API rate limiter?,Searched the README but it doesn't cover this case.,question
+auth middleware throws an error after clicking submit before validation finishes,Only reproduces when the user is logged in with an expired token.,bug
+auth middleware throws an error after the network drops mid-request,,bug
+Add code comments explaining issue list view,Would help onboarding if this had a short example.,documentation
+Does login form support keyboard shortcuts?,Not sure if this is expected behavior or a misconfiguration on my end.,question
+Unexpected behavior in navbar when submitting the form twice,"Console shows a TypeError, stack trace points to the component's effect hook.",bug
+Outdated documentation for MongoDB connection,,documentation
+Does issue board support two-factor authentication?,"New to the codebase, trying to understand the intended usage.",question
+Support two-factor authentication in MongoDB connection,,feature
+Support drag-and-drop reordering in kanban drag handler,This would pair well with the existing status system.,feature
+Why does API rate limiter behave this way?,,question
+Allow users to undo support from pagination controls,Competitor tools already support this and it's a common request.,feature
+What's the recommended approach for pagination controls?,"Couldn't find this in the docs, asking here before opening a bug report.",question
+Does issue list view support email digests?,"Couldn't find this in the docs, asking here before opening a bug report.",question
+Support email digests in signup page,,feature
+Is there a way to customize API rate limiter?,,question
+Add code comments explaining pagination controls,Docs mention a flag that no longer exists.,documentation
+Introduce dark mode for kanban drag handler,,feature
+Is there a way to customize password reset flow?,Searched the README but it doesn't cover this case.,question
+Add code comments explaining search bar,,documentation
+How do I configure API rate limiter?,Searched the README but it doesn't cover this case.,question
+Why does login form behave this way?,,question
+Allow users to two-factor authentication from issue list view,Competitor tools already support this and it's a common request.,feature
+Clarify the API docs for file upload widget,New contributors keep asking the same setup questions in chat.,documentation
+What's the recommended approach for MongoDB connection?,,question
+Unexpected behavior in API rate limiter when submitting the form twice,Only reproduces when the user is logged in with an expired token.,bug
+Introduce bulk actions for navbar,"Proposing this as a stretch goal, not urgent but valuable.",feature
+signup page crashes when switching between tabs quickly,"Console shows a TypeError, stack trace points to the component's effect hook.",bug
+Allow users to custom status labels from issue list view,Would make the workflow much faster for power users.,feature
+Is there a way to customize password reset flow?,Not sure if this is expected behavior or a misconfiguration on my end.,question
+Add code comments explaining settings page,New contributors keep asking the same setup questions in chat.,documentation
+JWT refresh flow shows stale data after the page is refreshed,"Console shows a TypeError, stack trace points to the component's effect hook.",bug

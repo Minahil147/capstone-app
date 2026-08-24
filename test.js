@@ -33,4 +33,15 @@ router.get("/:id", getIssueById);
 router.post("/", createIssue); 
 router.put("/:id", updateIssue); 
 router.delete("/:id", deleteIssue); 
-module.exports = router; 
+module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
