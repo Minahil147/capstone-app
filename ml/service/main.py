@@ -21,14 +21,11 @@ from pydantic import BaseModel, Field
 
 MODEL_PATH = Path(__file__).resolve().parent.parent / "model" / "issue_classifier.joblib"
 
-# Holds the loaded model. Populated once at startup by the lifespan handler
-# below, then reused for every request — never reloaded per-request.
 model_state = {"model": None}
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup: load the model once, before the app starts accepting requests.
     if not MODEL_PATH.exists():
         raise RuntimeError(
             f"Model file not found at {MODEL_PATH}. Run `python train.py` "
@@ -37,10 +34,7 @@ async def lifespan(app: FastAPI):
     model_state["model"] = joblib.load(MODEL_PATH)
     print(f"Loaded model from {MODEL_PATH}")
 
-    yield  # the app runs while paused here
-
-    # Shutdown: nothing to clean up for a simple in-memory model, but this
-    # is where you'd close DB connections etc. if there were any.
+    yield  
     model_state.clear()
 
 
@@ -50,10 +44,6 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan,
 )
-
-# CORS: without this, the browser blocks the React app's fetch calls to
-# this service, exactly like the earlier Node backend CORS issue. The Vite
-# dev server runs on 5173 by default.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
@@ -96,8 +86,6 @@ def predict_category(issue: IssueInput):
 
     try:
         prediction = model.predict([text])[0]
-        # predict_proba gives per-class probabilities; take the highest one
-        # as the confidence score for the predicted class.
         probabilities = model.predict_proba([text])[0]
         confidence = float(max(probabilities))
     except Exception as exc:
