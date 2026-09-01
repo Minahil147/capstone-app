@@ -21,11 +21,12 @@ const getIssueById = asyncHandler(async (req, res) => {
 });
 
 const createIssue = asyncHandler(async (req, res) => {
-  const { title, description = "", status = "todo" } = req.body;
+  const { title, description = "", status = "todo", category = null } = req.body;
   const newIssue = await Issue.create({
     title: title.trim(),
     description,
     status,
+    category,
     createdBy: req.user.id,
   });
   res.status(201).json(newIssue);
@@ -40,10 +41,11 @@ const updateIssue = asyncHandler(async (req, res) => {
     throw new ApiError(403, "You can only edit issues you created");
   }
 
-  const { title, description, status } = req.body;
+  const { title, description, status, category } = req.body;
   if (title !== undefined) issue.title = title.trim();
   if (description !== undefined) issue.description = description;
   if (status !== undefined) issue.status = status;
+  if (category !== undefined) issue.category = category;
 
   await issue.save();
   res.status(200).json(issue);

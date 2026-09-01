@@ -353,3 +353,25 @@ select {
 .issue-edit-row input {
   flex: 1;
 }
+
+.category-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.category-row select {
+  flex: 1;
+}
+
+.suggestion-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  color: #c9d1d9;
+}

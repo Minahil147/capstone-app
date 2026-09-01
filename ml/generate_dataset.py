@@ -1,13 +1,3 @@
-"""
-Builds a small, hand-authored dataset of software issue reports labeled by
-category (bug / feature / question / documentation). This mirrors the shape
-of the `Issue` model already used in the capstone app (title + description),
-so the model trained on it is directly usable by the app later.
-
-Run once to produce data/issues_dataset.csv. Re-running regenerates the file
-deterministically (fixed random seed).
-"""
-
 import random
 import csv
 
