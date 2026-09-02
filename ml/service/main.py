@@ -1,16 +1,3 @@
-"""
-FastAPI service that serves the Week 5 issue-category classifier over HTTP.
-
-Loads the trained model once at startup (not per-request — see README for
-why that matters), exposes a /predict endpoint the React frontend calls,
-and a /health endpoint for a quick liveness check.
-
-Run from the ml/ folder:
-    uvicorn service.main:app --reload --port 8000
-
-Then open http://localhost:8000/docs for the interactive API docs.
-"""
-
 from contextlib import asynccontextmanager
 from pathlib import Path
 
