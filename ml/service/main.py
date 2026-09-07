@@ -79,4 +79,3 @@ def predict_category(issue: IssueInput):
         raise HTTPException(status_code=400, detail=f"Could not generate a prediction: {exc}")
 
     return PredictionOutput(category=prediction, confidence=round(confidence, 4))
-
