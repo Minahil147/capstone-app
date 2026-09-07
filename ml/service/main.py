@@ -1,16 +1,4 @@
-"""
-FastAPI service that serves the Week 5 issue-category classifier over HTTP.
-
-Loads the trained model once at startup (not per-request — see README for
-why that matters), exposes a /predict endpoint the React frontend calls,
-and a /health endpoint for a quick liveness check.
-
-Run from the ml/ folder:
-    uvicorn service.main:app --reload --port 8000
-
-Then open http://localhost:8000/docs for the interactive API docs.
-"""
-
+import os
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -20,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 MODEL_PATH = Path(__file__).resolve().parent.parent / "model" / "issue_classifier.joblib"
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173").split(",")
 
 model_state = {"model": None}
 
@@ -46,11 +35,10 @@ app = FastAPI(
 )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 class IssueInput(BaseModel):
     """
@@ -77,7 +65,6 @@ def health_check():
 def predict_category(issue: IssueInput):
     model = model_state["model"]
     if model is None:
-        # Shouldn't happen if startup succeeded, but guard anyway.
         raise HTTPException(status_code=503, detail="Model is not loaded")
 
     text = f"{issue.title} {issue.description}".strip()
@@ -92,3 +79,4 @@ def predict_category(issue: IssueInput):
         raise HTTPException(status_code=400, detail=f"Could not generate a prediction: {exc}")
 
     return PredictionOutput(category=prediction, confidence=round(confidence, 4))
+
