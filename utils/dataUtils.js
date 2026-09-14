@@ -9,18 +9,18 @@ const getActiveUserNames = (users) => {
 const getNumberStats = (numbers) => {
     if (!Array.isArray(numbers) || numbers.length === 0) {
         return {
-            count: 0,
-            sum: 0,
-            average: 0,
-            max: null
+            Count: 0,
+            Sum: 0,
+            Average: 0,
+            Max: null
         };
     }
     const sum = numbers.reduce((total, num) => total + num, 0);
     return {
-        count: numbers.length,
-        sum,
-        average: sum / numbers.length,
-        max: Math.max(...numbers)
+        Count: numbers.length,
+        Sum: sum,
+        Average: sum / numbers.length,
+        Max: Math.max(...numbers)
     };
 };
 module.exports = {
